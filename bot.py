@@ -25,7 +25,7 @@ def guild_owner_only():
 @commands.cooldown(1, 60, commands.BucketType.user)
 @guild_owner_only()
 @bot.command()
-async def announce(ctx, *, message):
+async def mass(ctx, *, message):
     async def maybe_send(member):
         try:
             await member.send(message)
